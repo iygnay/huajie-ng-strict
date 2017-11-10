@@ -23,7 +23,7 @@
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true,
         "flatModuleOutFile": "strict.js",
-        "flatModuleId": "@huajie-ng/common"
+        "flatModuleId": "@huajie-ng/strict"
     },
     "files": [
         "./index.ts"

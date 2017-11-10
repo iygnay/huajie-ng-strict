@@ -16,5 +16,6 @@ export class TimeoutError extends Error {
      */
     constructor(public ms: number, message?: string) {
         super(message != null ? message : `the operation has timed out after ${ms} milliseconds.`);
+        Object.setPrototypeOf(this, TimeoutError.prototype);
     }
 }
