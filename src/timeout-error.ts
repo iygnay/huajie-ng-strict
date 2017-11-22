@@ -3,9 +3,8 @@
  * 
  * @export
  * @class TimeoutError
- * @extends {Error}
  */
-export class TimeoutError extends Error {
+export class TimeoutError {
 
     /**
      * Creates an instance of TimeoutError.
@@ -15,7 +14,8 @@ export class TimeoutError extends Error {
      * @memberof TimeoutError
      */
     constructor(public ms: number, message?: string) {
-        super(message != null ? message : `the operation has timed out after ${ms} milliseconds.`);
-        Object.setPrototypeOf(this, TimeoutError.prototype);
+        this.message = message != null ? message : `the operation has timed out after ${ms} milliseconds.`;
     }
+
+    message: string;
 }
